@@ -13,6 +13,7 @@ public class Lab05bvst {
         String angryString = Keyboard.getString();
         System.out.print("\nConfused?--> ");
         String confusedString = Keyboard.getString();
+        System.out.println();
         System.out.print("For the emotion you picked, how would you rate the intensity of it between 1 and 10? -->");
         int rating = Keyboard.getInt();
   
@@ -47,14 +48,15 @@ class Oogway {
 
     public String Happiness(){
 
-        String Low = "Shifu: “But a peach cannot defeat Tai Lung!” Oogway: “Maybe it can… If you are willing to guide it, to nurture it. To believe in it.”/n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
-        String Mid1 = "“Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.”/n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
-        String Mid2 = "“Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.”/n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
-        String Top = "“Inner peace, inner peace.” /n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";
-        
-        
+        String NewHappy = Happy;
 
-        if (Happy == "Y"){
+        String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
+        String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
+        String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
+        String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
+
+
+        if (NewHappy.equals("Y")){
             if (Rating <= 3){
                 HappyMessage = Low;
             }
@@ -75,13 +77,142 @@ class Oogway {
 
 
         }
+        else{
+            HappyMessage = "";
+        }
+       
+        return HappyMessage;
+    }
+    public String Sadness(){
+
+        String NewSad = Sad;
+        Random = Math.random();
+
+        String Low = "There is just news. There is no good or bad.\n In this quote, what Master Oogway tries to point out is that when we hear certain news the first thing we do would be to interpret that news as bad or good. But in real life, it is not about the context of that news but about the way our minds interpret that piece of information. Therefore, instead of categorizing things as good or bad, let us try to shape our minds in a way that they react to things in a calm way before jumping to any conclusions.";
+        String Low2 = "There are no accidents\n When something bad happens to you, never say why me. Everything happens for a reason whether it is good or bad. Learn from your mistakes and be optimistic. Because life has its ups and downs and there is always a reason behind each occurrence no matter how small or big.So rather than losing your hope, believe that great things will happen at the right time and place.";
+        String Mid1 = "You just need to believe. You must believe.\n There are times when we become desperate and feel down. So in order to overcome this despair and frustration, the first thing we need to do is believe in ourselves and the things that we want to achieve. By having faith in what we do, we will prove that nothing can get in our way to reach our main goal.";
+        String Mid2 = "You are the master of your destiny: No one and nothing can come in between you and your destiny except you. Take destiny by the horns and have fun.”/n You are the leader in your life. controlling and moving toward your fate and destiny is only in your own hands. And nobody can manipulate what is destined for you. So believe in what you are and keep moving forward in the direction that you desire.";
+        String Top = "It matters not what someone is born, but what they grow to be.\n In other words, your family s past and where you come from are not a representation of yourself and it is you, who choose to define your character and being in this massive world.";
+        String Top2 = "If you only do what you can do, you will never be more than you are now.\n This Master Oogway quote points to a fact that some of us do not really know what we are capable of doing and we only keep repeating the things that we know. For those, who want to see a change in their lives going further means making altercations in their lives instead of sticking to the same habits that they overdo on a daily basis. When you do something different from what you were doing before, you will have better chances of reaching a better place in your life. And as the saying goes “old ways will not open new doors!.";
+        String Top3 = "Nothing is impossible.\n If you want to reach your ultimate goal, you will experience a moment when you think that nothing is going to get in your way of achieving it. If you really think about it, this quote is true and despite the obstacles, you might encounter along the way, nothing could hold you back except yourself.";
+
+        if (NewSad.equals("Y")){
+            if (Rating <= 3){
+                if(Random >= .5){
+                    SadMessage = Low;
+                }
+                if(Random <= .5){
+                    SadMessage = Low2;
+                }
+            }
+            if (Rating > 3  && Rating < 6){
+                
+                if(Random >= .5){
+                    SadMessage = Mid1;
+                }
+                if(Random <= .5){
+                    SadMessage = Mid2;
+                }
+
+            }
+            if (Rating >= 6){
+                if(Random <= .3){
+                    SadMessage = Top;
+                }
+                if(Random > .3 && Random <.7){
+                    SadMessage = Top2;
+                }
+                if(Random >= .7){
+                    SadMessage = Top3;
+                }
+
+            }
+
+
+        }
+        else{
+            SadMessage = "";
+        }
+        
+        return SadMessage;
+    }
+    public String Angriness(){
+
+        String NewHappy = Happy;
+
+        String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
+        String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
+        String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
+        String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
+
+
+        if (NewHappy.equals("Y")){
+            if (Rating <= 3){
+                HappyMessage = Low;
+            }
+            if (Rating > 3  && Rating < 6){
+                Random = Math.random();
+                if(Random >= .5){
+                    HappyMessage = Mid1;
+                }
+                if(Random <= .5){
+                    HappyMessage = Mid2;
+                }
+
+            }
+            if (Rating >= 6){
+                HappyMessage = Top;
+
+            }
+
+
+        }
+       
+        return HappyMessage;
+    }
+    public String Confusedness(){
+
+        String NewHappy = Happy;
+
+        String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
+        String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
+        String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
+        String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
+
+
+        if (NewHappy.equals("Y")){
+            if (Rating <= 3){
+                HappyMessage = Low;
+            }
+            if (Rating > 3  && Rating < 6){
+                Random = Math.random();
+                if(Random >= .5){
+                    HappyMessage = Mid1;
+                }
+                if(Random <= .5){
+                    HappyMessage = Mid2;
+                }
+
+            }
+            if (Rating >= 6){
+                HappyMessage = Top;
+
+            }
+
+
+        }
+        
         return HappyMessage;
     }
 
     public void displayData() {
 
-        System.out.print(Happy);
+        System.out.flush();
+        System.out.println();
         System.out.print(Happiness());
+        System.out.print(Sadness());
+        System.out.println();
+        
     
     }
 
