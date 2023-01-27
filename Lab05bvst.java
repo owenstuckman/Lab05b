@@ -2,6 +2,7 @@
 // Open-Ended "Writing Classes Assignment
 // This is the student starting Version of the Lab05b assignment.
 
+
 public class Lab05bvst {
     public static void main(String[] args) {
         System.out.print("Enter Y or N, based on how you are feeling");
@@ -24,11 +25,11 @@ public class Lab05bvst {
 
 class Oogway {
 
-    String Happy;
-    String Sad;
-    String Angry;
-    String Confused;
-    int Rating;
+   private String Happy;
+    private String Sad;
+    private String Angry;
+    private String Confused;
+    private int Rating;
 
     Double Random;
 
@@ -46,7 +47,7 @@ class Oogway {
         Rating = rating;
     }
 
-    public String Happiness(){
+    public String getHappiness(){
 
         String NewHappy = Happy;
 
@@ -224,5 +225,4 @@ class Oogway {
     }
 
 }
-
 
