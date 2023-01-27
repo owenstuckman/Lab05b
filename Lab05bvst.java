@@ -56,7 +56,7 @@ class Oogway {
         String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
 
 
-        if (NewHappy.equals("Y")){
+        if (NewHappy.equals("Y") || NewHappy.equals("y")){
             if (Rating <= 3){
                 HappyMessage = Low;
             }
@@ -96,7 +96,7 @@ class Oogway {
         String Top2 = "If you only do what you can do, you will never be more than you are now.\n This Master Oogway quote points to a fact that some of us do not really know what we are capable of doing and we only keep repeating the things that we know. For those, who want to see a change in their lives going further means making altercations in their lives instead of sticking to the same habits that they overdo on a daily basis. When you do something different from what you were doing before, you will have better chances of reaching a better place in your life. And as the saying goes “old ways will not open new doors!.";
         String Top3 = "Nothing is impossible.\n If you want to reach your ultimate goal, you will experience a moment when you think that nothing is going to get in your way of achieving it. If you really think about it, this quote is true and despite the obstacles, you might encounter along the way, nothing could hold you back except yourself.";
 
-        if (NewSad.equals("Y")){
+        if (NewSad.equals("Y")|| NewSad.equals("y")){
             if (Rating <= 3){
                 if(Random >= .5){
                     SadMessage = Low;
@@ -138,71 +138,74 @@ class Oogway {
     }
     public String Angriness(){
 
-        String NewHappy = Happy;
+        String NewAngry = Angry;
 
-        String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
-        String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
-        String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
-        String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
+        String Low = "“Quit, do not quit. Noodles, do not noodles… You are too concerned with what was and what will be. There is a saying: Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.”\n Keep in mind that the unnecessary worries will force us into missing out on the good parts of our lives and they will do nothing but occupy our minds with the regrets of the past and the unknowns of the future.";
+        String Mid1 = "“Your mind is like this water my friend, when it is agitated it becomes difficult to see, but if you allow it to settle, the answer becomes clear.”/n That is why you need to be calm and have your mind cleared when making life-changing and vital decisions because if you do not consider this approach you will very likely end up regretting your decisions. Taking this step will help you choose more wisely and decide what is best for you. So keep your mind settled and away from what may distort you.";
+        String Mid2 = "“When will you realize? The more you take, the less you have.”/n In life, there is a certain capacity for everything. We should use anything that we have in our hands in the correct way and not go for too much. For this to be possible, we need to understand the limitations of everything and never use them far from what is expected. Because if we go for too much abundance we may not like the result in the end. In other words, don’t go for too much but at the same time don’t go for too less, and balance your life by respecting the needs of others.";
+        String Top =  "“I think they will all lose until they find a battle worth fighting.”/n Here we can understand from this quote that not everything is worth fighting for. There are certain battles, or in other words, problems that are worth fighting because by solving them we achieve what we want and get closer to our main purpose.";        
 
 
-        if (NewHappy.equals("Y")){
+        if (NewAngry.equals("Y")|| NewAngry.equals("y")){
             if (Rating <= 3){
-                HappyMessage = Low;
+                AngryMessage = Low;
             }
             if (Rating > 3  && Rating < 6){
                 Random = Math.random();
                 if(Random >= .5){
-                    HappyMessage = Mid1;
+                    AngryMessage = Mid1;
                 }
                 if(Random <= .5){
-                    HappyMessage = Mid2;
+                    AngryMessage = Mid2;
                 }
 
             }
             if (Rating >= 6){
-                HappyMessage = Top;
+                AngryMessage = Top;
 
             }
 
-
+        }
+        else{
+            AngryMessage = "";
         }
        
         return HappyMessage;
     }
     public String Confusedness(){
 
-        String NewHappy = Happy;
+        String NewConfused = Confused;
 
-        String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
-        String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
-        String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
-        String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
+        String Low = "There is always something more to learn. Even for a master.\n Even when you become a professional at what you do, there’s always something new to learn and a chance to grow further from where you are now. Therefore, you should always try and learn new things by seeking knowledge in your area of expertise. This way you will keep on growing every single day and become a better version of yourself than you were yesterday.";
+        String Mid1 = "When the path you walk always leads back to yourself, you never get anywhere.\n This quote means that you’ll go round in circles and never change your place if you never alter something in your life. Always be open to change, especially the change that you are sure will bring you good results.If you make different but better choices from now on, you will feel the difference as time goes by.";
+        String Mid2 = "One often meets his destiny on the road he takes to avoid it.\n We sometimes neglect what’s truly good for us on our journey to success and only focus on the goal, not the lessons we learn on the way. To avoid getting distracted by unimportant things or focusing solely on your goals instead of the journey itself, try to enjoy the ride and be aware of your surroundings as you move forward.";
+        String Top = "You must let go of the illusion of control.\n Keep in mind that you can’t control everything in your life and only control things that you are sure you can handle. For instance, who to befriend with, when to sleep, who to go out with and etc. This way you’ll get to know what to choose as your priority first and manage your time and energy of yours in the best possible way.";
 
 
-        if (NewHappy.equals("Y")){
+        if (NewConfused.equals("Y") || NewConfused.equals("y") ){
             if (Rating <= 3){
-                HappyMessage = Low;
+                ConfusedMessage = Low;
             }
             if (Rating > 3  && Rating < 6){
                 Random = Math.random();
                 if(Random >= .5){
-                    HappyMessage = Mid1;
+                    ConfusedMessage = Mid1;
                 }
                 if(Random <= .5){
-                    HappyMessage = Mid2;
+                    ConfusedMessage = Mid2;
                 }
 
             }
             if (Rating >= 6){
-                HappyMessage = Top;
+                ConfusedMessage = Top;
 
             }
-
-
+        }
+        else{
+            ConfusedMessage = "";
         }
         
-        return HappyMessage;
+        return ConfusedMessage;
     }
 
     public void displayData() {
@@ -210,10 +213,14 @@ class Oogway {
         System.out.flush();
         System.out.println();
         System.out.print(Happiness());
+        System.out.println();
         System.out.print(Sadness());
         System.out.println();
+        System.out.print(Angriness());
+        System.out.println();
+        System.out.print(Confusedness());
+        System.out.println();
         
-    
     }
 
 }
