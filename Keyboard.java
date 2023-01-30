@@ -26,4 +26,5 @@ public class Keyboard
      	String stringVal = input.nextLine();
 		return stringVal;
 	}
+
 }
