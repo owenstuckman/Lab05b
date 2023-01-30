@@ -2,12 +2,11 @@
 // Open-Ended "Writing Classes Assignment
 // This is the student starting Version of the Lab05b assignment.
 
+
 public class Lab05bvst {
     public static void main(String[] args) {
-
-        System.out.print("Please enter Y or N, based on how you are feeling");
-        System.out.print("\nYou can enter multiple emotions that you are feeling at once, or if you only feel one of the emotions you can also only select one.");
-        System.out.print("\n\nHappy?----> ");
+        System.out.print("Enter Y or N, based on how you are feeling");
+        System.out.print("\nHappy?----> ");
         String happyString = Keyboard.getString();
         System.out.print("\nSad?--> ");
         String sadString = Keyboard.getString();
@@ -16,24 +15,21 @@ public class Lab05bvst {
         System.out.print("\nConfused?--> ");
         String confusedString = Keyboard.getString();
         System.out.println();
-        System.out.print("For the emotions you picked, how would you rate the intensity of it between 1 and 10? -->");
+        System.out.print("For the emotion you picked, how would you rate the intensity of it between 1 and 10? -->");
         int rating = Keyboard.getInt();
   
-        ImageDisplay.main(args);
-
         Oogway r = new Oogway(happyString, sadString, angryString, confusedString, rating);
-        r.displayData();
-
+        r.setdisplayData();
     }
 }
 
 class Oogway {
 
-    String Happy;
-    String Sad;
-    String Angry;
-    String Confused;
-    int Rating;
+    private String Happy;
+    private String Sad;
+    private String Angry;
+    private String Confused;
+    private int Rating;
 
     Double Random;
 
@@ -41,9 +37,6 @@ class Oogway {
     String SadMessage;
     String AngryMessage;
     String ConfusedMessage;
-
-    Boolean failureVar;
-    String FailureMessage;
 
     public Oogway(String happy, String sad, String angry, String confused, int rating) {
       
@@ -54,7 +47,7 @@ class Oogway {
         Rating = rating;
     }
 
-    public String Happiness(){
+    public String getHappiness(){
 
         String NewHappy = Happy;
 
@@ -91,7 +84,7 @@ class Oogway {
        
         return HappyMessage;
     }
-    public String Sadness(){
+    public String getSadness(){
 
         String NewSad = Sad;
         Random = Math.random();
@@ -104,7 +97,7 @@ class Oogway {
         String Top2 = "If you only do what you can do, you will never be more than you are now.\n This Master Oogway quote points to a fact that some of us do not really know what we are capable of doing and we only keep repeating the things that we know. For those, who want to see a change in their lives going further means making altercations in their lives instead of sticking to the same habits that they overdo on a daily basis. When you do something different from what you were doing before, you will have better chances of reaching a better place in your life. And as the saying goes “old ways will not open new doors!.";
         String Top3 = "Nothing is impossible.\n If you want to reach your ultimate goal, you will experience a moment when you think that nothing is going to get in your way of achieving it. If you really think about it, this quote is true and despite the obstacles, you might encounter along the way, nothing could hold you back except yourself.";
 
-        if (NewSad.equals("Y")  || NewSad.equals("y")){
+        if (NewSad.equals("Y")|| NewSad.equals("y")){
             if (Rating <= 3){
                 if(Random >= .5){
                     SadMessage = Low;
@@ -135,6 +128,8 @@ class Oogway {
                 }
 
             }
+
+
         }
         else{
             SadMessage = "";
@@ -142,7 +137,7 @@ class Oogway {
         
         return SadMessage;
     }
-    public String Angriness(){
+    public String getAngriness(){
 
         String NewAngry = Angry;
 
@@ -176,9 +171,9 @@ class Oogway {
             AngryMessage = "";
         }
        
-        return AngryMessage;
+        return HappyMessage;
     }
-    public String Confusedness(){
+    public String getConfusedness(){
 
         String NewConfused = Confused;
 
@@ -214,47 +209,19 @@ class Oogway {
         return ConfusedMessage;
     }
 
+    public void setdisplayData() {
 
-    public void failureCheck(){
-         
-        if ((Sad.equals("Y") || Sad.equals("y")) || Confused.equals("Y") || Confused.equals("y") || Angry.equals("Y")|| Angry.equals("y") || Happy.equals("Y") || Happy.equals("y") ){
-
-            failureVar = false;
-        }
-        else{
-            failureVar = true;
-        }
-
+        System.out.flush();
+        System.out.println();
+        System.out.print(getHappiness());
+        System.out.println();
+        System.out.print(getSadness());
+        System.out.println();
+        System.out.print(getAngriness());
+        System.out.println();
+        System.out.print(getConfusedness());
+        System.out.println();
     }
 
-    public void displayData() {
-
-        failureCheck();
-
-        if (failureVar == true){
-
-            System.out.print("\n\n Master Oogway has no wisdom to share with you at this time. \n \n He is disappointed in your inability to type in the letter 'y' or 'n'.");
-
-        }
-        else{
-
-            System.out.flush();
-            System.out.print("Master Oogway will now share his wisdom with you on how you are feeling and what advice he would give to you based on each emotions.");
-            System.out.println("\n\n");
-
-            System.out.print(Happiness());
-            System.out.println("\n\n");
-
-            System.out.print(Sadness());
-            System.out.println("\n\n");
-
-            System.out.print(Angriness());
-            System.out.println("\n\n");
-    
-            System.out.print(Confusedness());
-            System.out.println("\n\n");
-        }        
-    }
 }
-
 
