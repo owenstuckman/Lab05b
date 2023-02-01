@@ -22,7 +22,7 @@ public class Lab05bvst {
         ImageDisplay.main(args);
 
         Oogway r = new Oogway(happyString, sadString, angryString, confusedString, rating);
-        r.displayData();
+        r.setdisplayData();
 
     }
 }
@@ -56,7 +56,7 @@ class Oogway {
         Rating = rating;
     }
 
-    public String Happiness(){
+    public String getHappiness(){
 
 
         String NewHappy = Happy;
@@ -92,7 +92,7 @@ class Oogway {
        
         return HappyMessage;
     }
-    public String Sadness(){
+    public String getSadness(){
 
         String NewSad = Sad;
         Random = Math.random();
@@ -143,7 +143,7 @@ class Oogway {
         
         return SadMessage;
     }
-    public String Angriness(){
+    public String getAngriness(){
 
         String NewAngry = Angry;
 
@@ -178,7 +178,7 @@ class Oogway {
        
         return AngryMessage;
     }
-    public String Confusedness(){
+    public String getConfusedness(){
 
         String NewConfused = Confused;
 
@@ -227,7 +227,7 @@ class Oogway {
 
     }
 
-    public void displayData() {
+    public void setdisplayData() {
 
         failureCheck();
         
@@ -243,16 +243,16 @@ class Oogway {
             System.out.print("Master Oogway will now share his wisdom with you on how you are feeling and what advice he would give to you based on each emotions.");
             System.out.println("\n\n");
 
-            System.out.print(Happiness());
+            System.out.print(getHappiness());
             System.out.println("\n\n");
 
-            System.out.print(Sadness());
+            System.out.print(getSadness());
             System.out.println("\n\n");
 
-            System.out.print(Angriness());
+            System.out.print(getAngriness());
             System.out.println("\n\n");
     
-            System.out.print(Confusedness());
+            System.out.print(getConfusedness());
             System.out.println("\n\n");
         }        
     }
