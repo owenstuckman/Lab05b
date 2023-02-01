@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 public class ImageDisplay {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
-        ImageIcon icon = new ImageIcon("C:\\Users\\ostuc\\Downloads\\Lab05b-main\\Lab05b-main\\Oogway.jpg");
+        ImageIcon icon = new ImageIcon("Oogway.jpg");
         Image image = icon.getImage();
         JLabel label = new JLabel(icon);
         frame.add(label);

@@ -215,7 +215,7 @@ class Oogway {
     }
 
 
-    public void failureCheck(){
+    private void failureCheck(){
          
         if ((Sad.equals("Y") || Sad.equals("y")) || Confused.equals("Y") || Confused.equals("y") || Angry.equals("Y")|| Angry.equals("y") || Happy.equals("Y") || Happy.equals("y") ){
 
