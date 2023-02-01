@@ -266,8 +266,8 @@ class Oogway {
 
             System.out.print(getHappiness());
             if(getHappiness() == ""){
-            }
-            else{System.out.println("\n\n");}
+            
+            }else{System.out.println("\n\n");}
 
             System.out.print(getSadness());
             if(getSadness() == ""){
@@ -277,14 +277,12 @@ class Oogway {
             System.out.print(getAngriness());
             if(getAngriness() == ""){
                 
-            }
-            else{System.out.println("\n\n");}
+            }else{System.out.println("\n\n");}
     
             System.out.print(getConfusedness());
             if(getConfusedness() == ""){
                 
-            }
-            else{System.out.println("\n\n");}
+            }else{System.out.println("\n\n");}
         }        
     }
 }
