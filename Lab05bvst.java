@@ -2,10 +2,10 @@
 // Open-Ended "Writing Classes Assignment
 // This is the student starting Version of the Lab05b assignment.
 
-public class Lab05bvst { // main user defined class 
+public class Lab05bvst { // Main user defined class 
     public static void main(String[] args) {
 
-        // Begining of Display Text  
+        // Begining of display text and getting inputs  
         System.out.print("Please enter Y or N, based on how you are feeling");
         System.out.print("\nYou can enter multiple emotions that you are feeling at once, or if you only feel one of the emotions you can also only select one.");
         System.out.print("\n\nHappy?----> ");
@@ -19,17 +19,21 @@ public class Lab05bvst { // main user defined class
         System.out.println();
         System.out.print("For the emotions you picked, how would you rate the intensity of it between 1 and 10? -->");
         int rating = Keyboard.getInt();
-  
+        
+        // Pulls Image Display Code 
         ImageDisplay.main(args);
 
+        // Sets up the constructor 
         Oogway r = new Oogway(happyString, sadString, angryString, confusedString, rating);
         r.setdisplayData();
 
     }
 }
 
+// Class 2 
 class Oogway {
 
+    // Defining Varaibles 
     private String Happy;
     private String Sad;
     private String Angry;
@@ -49,7 +53,7 @@ class Oogway {
 
 
     public Oogway(String happy, String sad, String angry, String confused, int rating) {
-      
+        // Pulls objects from constructor 
         Happy = happy;
         Sad = sad;
         Angry = angry;
@@ -57,17 +61,19 @@ class Oogway {
         Rating = rating;
     }
 
+    // Emotion Method 
     public String getHappiness(){
 
-
+        // Pulls Object
         String NewHappy = Happy;
 
+        // All possible Responses 
         String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
         String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
         String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
         String Top = "Inner peace, inner peace. \n As simple as this quote may seem, Master Oogway always looked for peace and suggested others to look for it as well. So what we suggest you do is seek inner peace and always prioritize the clarity of your mind above anything else.This way you will become a better person and improve in many aspects of your life.";        
 
-
+        // Uses if statments to determine which string to return based off of happiness value 
         if (NewHappy.equals("Y") || NewHappy.equals("y")){
             if (Rating <= 3){
                 HappyMessage = Low;
@@ -87,12 +93,17 @@ class Oogway {
 
             }
         }
+
+        // If anything else then a Y or y is entered, returns nothing 
         else{
             HappyMessage = "";
         }
-       
+
+        // Returns message 
         return HappyMessage;
     }
+
+    // Does exact same thing as 1st get method 
     public String getSadness(){
 
         String NewSad = Sad;
@@ -144,6 +155,8 @@ class Oogway {
         
         return SadMessage;
     }
+
+    // Does exact same thing as 1st get method 
     public String getAngriness(){
 
         String NewAngry = Angry;
@@ -179,6 +192,8 @@ class Oogway {
        
         return AngryMessage;
     }
+
+    // Does exact same thing as 1st get method 
     public String getConfusedness(){
 
         String NewConfused = Confused;
@@ -215,7 +230,7 @@ class Oogway {
         return ConfusedMessage;
     }
 
-
+    // Private helper method that creates falire check to see if user entered values are compatiable with the code  
     private void failureCheck(){
          
         if ((Sad.equals("Y") || Sad.equals("y")) || Confused.equals("Y") || Confused.equals("y") || Angry.equals("Y")|| Angry.equals("y") || Happy.equals("Y") || Happy.equals("y") ){
@@ -228,8 +243,10 @@ class Oogway {
 
     }
 
+    // Set Method
     public void setdisplayData() {
 
+        // Runs the Failure Check 
         failureCheck();
         
 
@@ -238,8 +255,11 @@ class Oogway {
             System.out.print("\n\n Master Oogway has no wisdom to share with you at this time. \n \n He is disappointed in your inability to type in the letter 'y' or 'n'.");
 
         }
+
+        // Normal return with no failure 
         else{
 
+            // Prints emotion methods to terminal 
             System.out.flush();
             System.out.print("Master Oogway will now share his wisdom with you on how you are feeling and what advice he would give to you based on each emotions.");
             System.out.println("\n\n");
