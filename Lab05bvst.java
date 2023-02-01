@@ -17,7 +17,7 @@ public class Lab05bvst { // Main user defined class
         System.out.print("\nConfused?--> ");
         String confusedString = Keyboard.getString();
         System.out.println();
-        System.out.print("For the emotions you picked, how would you rate the intensity of it between 1 and 10? -->");
+        System.out.print("For the emoti on(s) you picked, how would you rate the intensity of it between 1 and 10? -->");
         int rating = Keyboard.getInt();
         
         // Pulls Image Display Code 
@@ -67,7 +67,7 @@ class Oogway {
         // Pulls Object
         String NewHappy = Happy;
 
-        // All possible Responses 
+        // All possible responses dependent on level of emotion 
         String Low = "Shifu: But a peach cannot defeat Tai Lung! Oogway: Maybe it can… If you are willing to guide it, to nurture it. To believe in it. \n As you probably remember, Master Shifu doubts Po being chosen for being the Dragon Warrior. So he argues with Oogway and tells him he can not defeat the enemy.However, the wise Master Oogway tells him to lead Po and train him so that he will achieve his destiny. This means that we should always have faith and belief in ourselves. Also by training, practicing, and hard work we will achieve what we want.";
         String Mid1 = "Use your skills for the good, young warrior. Find the one thing you were denied so long ago — compassion.\n Using the abilities and skills that you have in a good way, makes you much closer to what you really want. This also makes you become an inspiration for others to follow in your footsteps. This quote also means that nothing can be solved with a negative mindset and the best way to approach a problem would be positivity.";
         String Mid2 = "Look at this tree. I cannot make it blossom when it suits me, nor make it bear fruit before its time.\n From this quote, we can realize that not everything is in our hands. For instance, we can not turn daylight into the night nor travel to the past and change our previous regrets. Everything needs time and patience, so be patient and know that everything happens when it needs to happen.";
