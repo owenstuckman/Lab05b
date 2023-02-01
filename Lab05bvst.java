@@ -2,9 +2,10 @@
 // Open-Ended "Writing Classes Assignment
 // This is the student starting Version of the Lab05b assignment.
 
-public class Lab05bvst {
+public class Lab05bvst { // main user defined class 
     public static void main(String[] args) {
 
+        // Begining of Display Text  
         System.out.print("Please enter Y or N, based on how you are feeling");
         System.out.print("\nYou can enter multiple emotions that you are feeling at once, or if you only feel one of the emotions you can also only select one.");
         System.out.print("\n\nHappy?----> ");
