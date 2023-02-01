@@ -259,11 +259,15 @@ class Oogway {
         // Normal return with no failure 
         else{
 
-            // Prints emotion methods to terminal 
+            // Prints emotion methods to terminal
+            
+            //initial message
             System.out.flush();
             System.out.print("\n\nMaster Oogway will now share his wisdom with you on how you are feeling and what advice he would give to you based on each emotions.");
             System.out.println("\n\n");
 
+
+            // emotion methods and check if need spacs if multiple emotions are called
             System.out.print(getHappiness());
             if(getHappiness() == ""){
             
