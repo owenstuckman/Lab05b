@@ -241,20 +241,30 @@ class Oogway {
         else{
 
             System.out.flush();
-            System.out.print("Master Oogway will now share his wisdom with you on how you are feeling and what advice he would give to you based on each emotions.");
+            System.out.print("\n\nMaster Oogway will now share his wisdom with you on how you are feeling and what advice he would give to you based on each emotions.");
             System.out.println("\n\n");
 
             System.out.print(getHappiness());
-            System.out.println("\n\n");
+            if(getHappiness() == ""){
+            }
+            else{System.out.println("\n\n");}
 
             System.out.print(getSadness());
-            System.out.println("\n\n");
+            if(getSadness() == ""){
+
+            }else{System.out.println("\n\n");}
 
             System.out.print(getAngriness());
-            System.out.println("\n\n");
+            if(getAngriness() == ""){
+                
+            }
+            else{System.out.println("\n\n");}
     
             System.out.print(getConfusedness());
-            System.out.println("\n\n");
+            if(getConfusedness() == ""){
+                
+            }
+            else{System.out.println("\n\n");}
         }        
     }
 }
