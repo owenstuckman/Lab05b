@@ -16,7 +16,7 @@ public class Lab05bvst { // Main user defined class
         System.out.print("\nConfused?--> ");
         String confusedString = Keyboard.getString();
         System.out.println();
-        System.out.print("For the emoti on(s) you picked, how would you rate the intensity of it between 1 and 10? -->");
+        System.out.print("For the emotion(s) you picked, how would you rate the intensity of it between 1 and 10? -->");
         int rating = Keyboard.getInt();
         
         // Pulls Image Display Code 
@@ -159,9 +159,9 @@ class Oogway {
         String NewAngry = Angry;
 
         String Low = "“Quit, do not quit. Noodles, do not noodles… You are too concerned with what was and what will be. There is a saying: Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.”\n Keep in mind that the unnecessary worries will force us into missing out on the good parts of our lives and they will do nothing but occupy our minds with the regrets of the past and the unknowns of the future.";
-        String Mid1 = "“Your mind is like this water my friend, when it is agitated it becomes difficult to see, but if you allow it to settle, the answer becomes clear.”/n That is why you need to be calm and have your mind cleared when making life-changing and vital decisions because if you do not consider this approach you will very likely end up regretting your decisions. Taking this step will help you choose more wisely and decide what is best for you. So keep your mind settled and away from what may distort you.";
-        String Mid2 = "“When will you realize? The more you take, the less you have.”/n In life, there is a certain capacity for everything. We should use anything that we have in our hands in the correct way and not go for too much. For this to be possible, we need to understand the limitations of everything and never use them far from what is expected. Because if we go for too much abundance we may not like the result in the end. In other words, don’t go for too much but at the same time don’t go for too less, and balance your life by respecting the needs of others.";
-        String Top =  "“I think they will all lose until they find a battle worth fighting.”/n Here we can understand from this quote that not everything is worth fighting for. There are certain battles, or in other words, problems that are worth fighting because by solving them we achieve what we want and get closer to our main purpose.";        
+        String Mid1 = "“Your mind is like this water my friend, when it is agitated it becomes difficult to see, but if you allow it to settle, the answer becomes clear.”\n That is why you need to be calm and have your mind cleared when making life-changing and vital decisions because if you do not consider this approach you will very likely end up regretting your decisions. Taking this step will help you choose more wisely and decide what is best for you. So keep your mind settled and away from what may distort you.";
+        String Mid2 = "“When will you realize? The more you take, the less you have.”\n In life, there is a certain capacity for everything. We should use anything that we have in our hands in the correct way and not go for too much. For this to be possible, we need to understand the limitations of everything and never use them far from what is expected. Because if we go for too much abundance we may not like the result in the end. In other words, don’t go for too much but at the same time don’t go for too less, and balance your life by respecting the needs of others.";
+        String Top =  "“I think they will all lose until they find a battle worth fighting.”\n Here we can understand from this quote that not everything is worth fighting for. There are certain battles, or in other words, problems that are worth fighting because by solving them we achieve what we want and get closer to our main purpose.";        
 
         if (NewAngry.equals("Y")|| NewAngry.equals("y")){
             if (Rating <= 3){
@@ -248,7 +248,7 @@ class Oogway {
 
         if (failureVar == true){
 
-            System.out.print("\n\n Master Oogway has no wisdom to share with you at this time. \n \n He is disappointed in your inability to type in the letter 'y' or 'n'.");
+            System.out.print("\n\n Master Oogway has no wisdom to share with you at this time. \n \nHe is disappointed in your inability to type in the letter 'y' or 'n'.");
 
         }
 
