@@ -244,8 +244,7 @@ class Oogway {
 
         // Runs the Failure Check 
         failureCheck();
-        
-
+    
         if (failureVar == true){
 
             System.out.print("\n\n Master Oogway has no wisdom to share with you at this time. \n \n He is disappointed in your inability to type in the letter 'y' or 'n'.");
