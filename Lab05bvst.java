@@ -49,8 +49,6 @@ class Oogway {
     Boolean failureVar;
     String FailureMessage;
 
-
-
     public Oogway(String happy, String sad, String angry, String confused, int rating) {
         // Pulls objects from constructor 
         Happy = happy;
@@ -201,7 +199,6 @@ class Oogway {
         String Mid1 = "When the path you walk always leads back to yourself, you never get anywhere.\n This quote means that you’ll go round in circles and never change your place if you never alter something in your life. Always be open to change, especially the change that you are sure will bring you good results.If you make different but better choices from now on, you will feel the difference as time goes by.";
         String Mid2 = "One often meets his destiny on the road he takes to avoid it.\n We sometimes neglect what’s truly good for us on our journey to success and only focus on the goal, not the lessons we learn on the way. To avoid getting distracted by unimportant things or focusing solely on your goals instead of the journey itself, try to enjoy the ride and be aware of your surroundings as you move forward.";
         String Top = "You must let go of the illusion of control.\n Keep in mind that you can’t control everything in your life and only control things that you are sure you can handle. For instance, who to befriend with, when to sleep, who to go out with and etc. This way you’ll get to know what to choose as your priority first and manage your time and energy of yours in the best possible way.";
-
 
         if (NewConfused.equals("Y") || NewConfused.equals("y") ){
             if (Rating <= 3){
