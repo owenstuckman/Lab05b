@@ -1,6 +1,5 @@
 // Lab05bvst.java
-// Open-Ended "Writing Classes Assignment
-// This is the student starting Version of the Lab05b assignment.
+// Open-Ended "Writing Classes" Assignment
 
 public class Lab05bvst { // Main user defined class 
     public static void main(String[] args) {
@@ -267,7 +266,7 @@ class Oogway {
             System.out.println("\n\n");
 
 
-            // emotion methods and check if need spacs if multiple emotions are called
+            // emotion methods and check if need spaces if multiple emotions are called
             System.out.print(getHappiness());
             if(getHappiness() == ""){
             
